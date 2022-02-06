@@ -10,10 +10,10 @@ import {
 } from "./layout.module.css";
 
 
-const Layout = ({ pageTitle, children }) => {
+const Layout = (props) => {
     return (
         <div className={container}>
-            <title>{pageTitle}</title>
+            <title>{props.pageTitle}</title>
             <nav>
                 <ul className={navLinks}>
                     <li className={navLinkItem}><Link className={navLinkText} to="/">Home</Link></li>
@@ -21,8 +21,8 @@ const Layout = ({ pageTitle, children }) => {
                 </ul>
             </nav>
             <main>
-                <h1 className={heading}>{pageTitle}</h1>
-                {children}
+                <h1 className={heading}>{props.pageTitle}</h1>
+                {props.children}
             </main>
         </div>
     )
