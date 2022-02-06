@@ -33,7 +33,7 @@ const Layout = (props) => {
                 </ul>
             </nav>
             <main>
-                <h1 className={heading}>{data.site.siteMetadata.title}</h1>
+                <h1 className={heading}>{props.pageTitle}</h1>
                 {props.children}
             </main>
         </div>
